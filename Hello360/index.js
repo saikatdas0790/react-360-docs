@@ -10,16 +10,12 @@ export default class Hello360 extends React.Component {
     this.setState({ count: this.state.count + 1 });
   };
 
-  componentDidMount() {
-    setInterval(this._incrementCount, 1000);
-  }
-
   render() {
     return (
       <View style={styles.panel}>
-        <View style={styles.greetingBox}>
+        <VrButton onClick={this._incrementCount} style={styles.greetingBox}>
           <Text style={styles.greeting}>{`Count: ${this.state.count}`}</Text>
-        </View>
+        </VrButton>
       </View>
     );
   }
